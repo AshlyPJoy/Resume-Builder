@@ -5,6 +5,9 @@ import Dashboard from './pages/Dashboard';
 import Builder from './pages/Builder';
 import ProtectedRoute from './components/ProtectedRoute';
 import TemplateSelector from './pages/Template';
+import ForgotPassword from './pages/ForgotPassword';
+import ResetPassword from './pages/ResetPassword';
+
 
 
 function App() {
@@ -38,7 +41,8 @@ function App() {
             </ProtectedRoute>
           }
         />
-
+<Route path="/forgot-password" element={<ForgotPassword />} />
+<Route path="/reset-password/:token" element={<ResetPassword />} />
       </Routes>
     </BrowserRouter>
   );

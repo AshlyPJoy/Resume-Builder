@@ -1,7 +1,7 @@
 import  { useState } from "react";
 import { Mail, Lock, Eye, EyeOff, ArrowRight, FileText } from "lucide-react";
 import api from "../api/axios"
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Login({ onSuccess }) {
   const [formData, setFormData] = useState({ email: "", password: "" });
@@ -153,12 +153,9 @@ export default function Login({ onSuccess }) {
               >
                 Password
               </label>
-              <a
-                href="#forgot"
-                className="text-xs text-[#9C7B1B] hover:underline font-['IBM_Plex_Sans',sans-serif]"
-              >
-                Forgot?
-              </a>
+             <Link to="/forgot-password" className="text-xs text-[#9C7B1B] hover:underline">
+  Forgot?
+</Link>
             </div>
             <div
               className={`${inputRowBase} ${focusedField === "password" ? inputRowFocused : ""}`}
