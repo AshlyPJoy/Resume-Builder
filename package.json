@@ -1,0 +1,19 @@
+{
+  "name": "resume-builder",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "server": "npm run dev --prefix server",
+    "client": "npm run dev --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "concurrently": "^9.2.4"
+  },
+  "dependencies": {
+    "nodemailer": "^9.0.3"
+  }
+}
